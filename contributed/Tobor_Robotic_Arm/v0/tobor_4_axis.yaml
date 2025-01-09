@@ -1,0 +1,121 @@
+board: tobor_v0
+name: evezor_tobor_v0_4axis
+
+start:
+  must_home: false
+  deactivate_parking: false
+  check_limits: false
+
+stepping:
+  engine: RMT
+  idle_ms: 255
+  pulse_us: 2
+  dir_delay_us: 1
+  disable_delay_us: 0
+
+axes:
+  shared_stepper_disable_pin: NO_PIN
+  x:
+    steps_per_mm: 222.2222
+    max_rate_mm_per_min: 54000.0
+    acceleration_mm_per_sec2: 100.0
+    max_travel_mm: 5000.0
+    soft_limits: false
+    homing:
+      cycle: 2
+      positive_direction: false
+      mpos_mm: 150.000
+      feed_mm_per_min: 100.000
+      seek_mm_per_min: 200.000
+      settle_ms: 500
+      seek_scaler: 1.100
+      feed_scaler: 1.100
+
+    motor0:
+      limit_neg_pin: NO_PIN
+      limit_pos_pin: NO_PIN
+      limit_all_pin: NO_PIN
+      hard_limits: false
+      pulloff_mm: 1.000
+      standard_stepper:
+        step_pin: gpio.21
+        direction_pin: gpio.23
+        disable_pin: gpio.22
+  y:
+    steps_per_mm: 222.2222
+    max_rate_mm_per_min: 54000.0
+    acceleration_mm_per_sec2: 100.0
+    max_travel_mm: 5000.0
+    soft_limits: false
+    homing:
+      cycle: 2
+      positive_direction: false
+      mpos_mm: 150.000
+      feed_mm_per_min: 100.000
+      seek_mm_per_min: 200.000
+      settle_ms: 500
+      seek_scaler: 1.100
+      feed_scaler: 1.100
+
+    motor0:
+      limit_neg_pin: NO_PIN
+      limit_pos_pin: NO_PIN
+      limit_all_pin: NO_PIN
+      hard_limits: false
+      pulloff_mm: 1.000
+      standard_stepper:
+        step_pin: gpio.5
+        direction_pin: gpio.19:low
+        disable_pin: gpio.18
+  z:
+    steps_per_mm: 169.7652
+    max_rate_mm_per_min: 3000.0
+    acceleration_mm_per_sec2: 100.0
+    max_travel_mm: 56.0
+    soft_limits: true
+    homing:
+      cycle: 2
+      positive_direction: true
+      mpos_mm: 28
+      feed_mm_per_min: 300.000
+      seek_mm_per_min: 600.000
+      settle_ms: 500
+      seek_scaler: 1.100
+      feed_scaler: 1.100
+
+    motor0:
+      limit_neg_pin: NO_PIN
+      limit_pos_pin: gpio.2:low
+      limit_all_pin: NO_PIN
+      hard_limits: false
+      pulloff_mm: 1.000
+      standard_stepper:
+        step_pin: gpio.4
+        direction_pin: gpio.17:low
+        disable_pin: gpio.16
+  a:
+    steps_per_mm: 17.7778
+    max_rate_mm_per_min: 25000.0
+    acceleration_mm_per_sec2: 100.0
+    max_travel_mm: 5000.0
+    soft_limits: false
+    homing:
+      cycle: 2
+      positive_direction: true
+      mpos_mm: 250
+      feed_mm_per_min: 100.000
+      seek_mm_per_min: 200.000
+      settle_ms: 500
+      seek_scaler: 1.100
+      feed_scaler: 1.100
+
+    motor0:
+      limit_neg_pin: NO_PIN
+      limit_pos_pin: NO_PIN
+      limit_all_pin: NO_PIN
+      hard_limits: false
+      pulloff_mm: 1.000
+      standard_stepper:
+        step_pin: gpio.27
+        direction_pin: gpio.14
+        disable_pin: gpio.26
